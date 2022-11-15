@@ -1,10 +1,11 @@
 'use strict';
 
-import { execSync } from 'child_process';
+const { execSync } = require('child_process');
 
 class Scripts {
-  constructor(serverless) {
+  constructor(serverless, options) {
     this.serverless = serverless;
+    this.options = options;
     this.commands = {};
     this.hooks = {};
 
